@@ -12,7 +12,11 @@
 	app.controller("contactController", function($scope) {
 
 	    $scope.submit = function(recipient, subject, body){       
-	        window.plugins.emailComposer.showEmailComposer(subject,body,recipient,"","",false); 
+	        window.plugins.email.open({
+			    to:      [recipient],
+			    subject: subject,
+			    body:    body
+			}); 
 	    }
 
 	});
