@@ -12,7 +12,7 @@
 	background: inherit;
 }
 
-.home.page {
+.home.page, .contact.page {
 	background: url('../images/bg_tecido_alaranjado.jpg');
 }
 

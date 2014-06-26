@@ -1,7 +1,4 @@
 <ons-page class="center home" ng-controller="homeController">
-    <ons-navigator-toolbar title="Método DeRose | Martínez"  right-button-icon="fa fa-lg fa-angle-right"
-                           on-right-button-click="ons.navigator.pushPage('page2.html')">
-    </ons-navigator-toolbar>
     <div class="buttons">
 	    <ons-button >
             <ons-icon icon="calendar" size="5x" ></ons-icon>
@@ -17,7 +14,7 @@
             <ons-icon icon="bell-o" size="5x" ></ons-icon>
     	</ons-button>
 
-    	<ons-button>
+    	<ons-button ng-click="ons.slidingMenu.setAbovePage('navigator2.html')">
             <ons-icon icon="envelope" size="5x" ></ons-icon>
     	</ons-button>
     	<ons-button ng-click="callSchool()">
