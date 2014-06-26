@@ -1,23 +1,25 @@
-(function(){
-	'use strict';
-	var app = angular.module('myApp', ['onsen.directives']);
-	app.controller("homeController", function($scope) {
+var app = angular.module('myApp', ['onsen.directives']);
 
-	    $scope.callSchool = function(){       
-	        document.location = "tel:47333801";
-	    }
+document.addEventListener('deviceready', function() {
+    angular.bootstrap(document, ['myApp']);
+}, false);
 
-	});
+app.controller("homeController", function($scope) {
 
-	app.controller("contactController", function($scope) {
+    $scope.callSchool = function(){       
+        document.location = "tel:47333801";
+    }
 
-	    $scope.submit = function(recipient, subject, body){       
-	        window.plugins.email.open({
-			    to:      [recipient],
-			    subject: subject,
-			    body:    body
-			}); 
-	    }
+});
 
-	});
-})();
+app.controller("contactController", function($scope) {
+
+    $scope.submit = function(recipient, subject, body){       
+        window.plugins.email.open({
+		    to:      [recipient],
+		    subject: subject,
+		    body:    body
+		}); 
+    }
+
+});
