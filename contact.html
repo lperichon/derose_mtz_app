@@ -1,5 +1,5 @@
-<ons-page class="center contact" ng-init="recipient_email = ''">
-	<ons-select ng-model="recipient_email" style="margin: 8px 0; display: block; width: 100%">
+<ons-page class="center contact" ng-controller="contactController" ng-init="recipient = ''">
+	<ons-select ng-model="recipient" style="margin: 8px 0; display: block; width: 100%">
         <option value="" disabled selected>Selecciona el destinatario</option>
 	    <option value="martinez.ar@metododerose.org">Sede Martínez</option>
 	    <option value="natalia.sanmartin@metododerose.org">Natalia Sanmartín</option>
@@ -14,12 +14,12 @@
     </ons-text-input>
 
     <ons-text-area 
-    	ng-model="content" 
-	    placeholder="Contenido" 
+    	ng-model="body" 
+	    placeholder="Mensaje" 
 	    style="width: 100%; height: 100px;">
   	</ons-text-area>
 
-    <ons-button 
+    <ons-button ng-click="submit(recipient, subject, body)"
         type="cta-large" 
         style="margin: 8px 0; display: block; width: 100%;">
         Enviar

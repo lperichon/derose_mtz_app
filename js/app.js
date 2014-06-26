@@ -8,4 +8,12 @@
 	    }
 
 	});
+
+	app.controller("contactController", function($scope) {
+
+	    $scope.submit = function(recipient, subject, body){       
+	        window.plugins.emailComposer.showEmailComposer(subject,body,recipient,"","",false); 
+	    }
+
+	});
 })();
