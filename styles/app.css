@@ -1,0 +1,50 @@
+@import url('type/dosis.css');
+
+.onsen_navigator-title {
+	font-family: 'DosisRegular'
+}
+
+.navigator-toolbar {
+	background: url('../images/tile-header-II.jpg') repeat;
+}
+
+.topcoat-navigation-bar__bg {
+	background: inherit;
+}
+
+.home.page {
+	background: url('../images/bg_tecido_alaranjado.jpg');
+}
+
+.buttons {
+	width: 400px;
+	height: 100%;
+	display: inline-block;
+}
+
+.buttons .topcoat-button {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid gray;
+  border: none;
+  margin: 10px;
+  width: 130px;
+  height: 120px;
+  margin: 10px;
+}
+
+.topcoat-button:hover,
+.topcoat-button--quiet:hover,
+.topcoat-button--large:hover,
+.topcoat-button--large--quiet:hover,
+.topcoat-button--cta:hover,
+.topcoat-button--large--cta:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.topcoat-button:active {
+  background-color: rgba(102, 102, 102, 0.5);
+}
