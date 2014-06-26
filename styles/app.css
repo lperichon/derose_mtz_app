@@ -12,7 +12,7 @@
 	background: inherit;
 }
 
-.home.page, .contact.page {
+.home.page, .contact.page, .about-us.page {
 	background: url('../images/bg_tecido_alaranjado.jpg');
 }
 
@@ -48,4 +48,32 @@
 
 .topcoat-button:active {
   background-color: rgba(102, 102, 102, 0.5);
+}
+
+.about-us.page {
+  padding: 10px;
+}
+
+.about-us .instructor {
+  margin-bottom: 20px;
+}
+
+.about-us .instructor .info {
+  text-align: left;
+  background: url('../images/tile-header-II.jpg');
+  border-radius: 4px;
+  padding-left: 20px;
+}
+
+.info h2 {
+  margin-bottom: 8px;
+}
+
+.info h3 {
+  margin-top: 8px;
+}
+
+.info p i {
+  width: 40px;
+  text-align: center;
 }
