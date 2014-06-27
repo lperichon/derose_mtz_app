@@ -20,4 +20,19 @@
 	    }
 
 	});
+
+	app.controller("aboutUsController", function($scope) {
+
+	    $scope.call = function(phone){       
+	        document.location = "tel:" + phone; 
+	    }
+
+	    $scope.mail = function(mail){       
+	        document.location = "mailto:" + mail; 
+	    }
+	    
+	    $scope.fb = function(id){       
+	        document.location = "fb://profile/" + id; 
+	    }
+	});
 })();

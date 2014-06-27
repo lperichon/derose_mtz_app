@@ -1,38 +1,38 @@
-<ons-page class="center about-us">
+<ons-page class="center about-us" ng-controller="aboutUsController">
   <ons-row class="instructor">
-    <ons-col size=25 class="photo">
+    <ons-col size=30 class="photo">
       <ons-icon icon="user" size="5x"></ons-icon>
     </ons-col>
-    <ons-col size=75 class="info">
+    <ons-col size=70 class="info">
     	<h2>Natalia Sanmartín Gil</h2>
     	<h3>Directora General</h3>
-    	<p><ons-icon icon="envelope" size="lg"></ons-icon>natalia.sanmartin@metododerose.org</p>
-    	<p><ons-icon icon="phone" size="lg"></ons-icon>15-5896-0834</p>
-    	<p><ons-icon icon="facebook" size="lg"></ons-icon>facebook.com/natalia.sanmartin</p>
+    	<ons-button ng-click="mailto('natalia.sanmartin@metododerose.org')"><ons-icon icon="envelope" size="lg"></ons-icon></ons-button>
+    	<ons-button ng-click="call('15-5896-0834')"><ons-icon icon="phone" size="lg"></ons-icon></ons-button>
+    	<ons-button ng-click="fb('natalia.sanmartin')"><ons-icon icon="facebook" size="lg"></ons-icon></ons-button>
     </ons-col>
   </ons-row>
   <ons-row class="instructor">
-    <ons-col size=25 class="photo">
+    <ons-col size=30 class="photo">
       <ons-icon icon="user" size="5x"></ons-icon>
     </ons-col>
-    <ons-col size=75 class="info">
+    <ons-col size=70 class="info">
     	<h2>Luis Perichon</h2>
     	<h3>Instructor</h3>
-    	<p><ons-icon icon="envelope" size="lg"></ons-icon>luis.perichon@metododerose.org</p>
-    	<p><ons-icon icon="phone" size="lg"></ons-icon>15-3393-8907</p>
-    	<p><ons-icon icon="facebook" size="lg"></ons-icon>facebook.com/lperichon</p>
+    	<ons-button ng-click="mailto('luis.perichon@metododerose.org')"><ons-icon icon="envelope" size="lg"></ons-icon></ons-button>
+    	<ons-button ng-click="call('15-3393-8907')"><ons-icon icon="phone" size="lg"></ons-icon></ons-button>
+    	<ons-button ng-click="fb('lperichon')"><ons-icon icon="facebook" size="lg"></ons-icon></ons-button>
     </ons-col>
   </ons-row>
   <ons-row class="instructor">
-    <ons-col size=25 class="photo">
+    <ons-col size=30 class="photo">
       <ons-icon icon="user" size="5x"></ons-icon>
     </ons-col>
-    <ons-col size=75 class="info">
+    <ons-col size=70 class="info">
     	<h2>Vênus Santos</h2>
     	<h3>Instructora</h3>
-    	<p><ons-icon icon="envelope" size="lg"></ons-icon>venus.santos@metododerose.org</p>
-    	<p><ons-icon icon="phone" size="lg"></ons-icon>15-3136-5999</p>
-    	<p><ons-icon icon="facebook" size="lg"></ons-icon>facebook.com/venus.santos</p>
+    	<ons-button ng-click="mailto('venus.santos@metododerose.org')"><ons-icon icon="envelope" size="lg"></ons-icon></ons-button>
+    	<ons-button ng-click="call('15-3136-5999')"><ons-icon icon="phone" size="lg"></ons-icon></ons-button>
+    	<ons-button ng-click="fb('venus.santos')"><ons-icon icon="facebook" size="lg"></ons-icon></ons-button>
     </ons-col>
   </ons-row>
 </ons-page>

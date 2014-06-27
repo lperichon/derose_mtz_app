@@ -63,19 +63,18 @@
   text-align: left;
   background: url('../images/tile-header-II.jpg');
   border-radius: 4px;
-  padding-left: 8px;
+  padding: 8px;
 }
 
 .info h2 {
   margin-bottom: 8px;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .info h3 {
   margin-top: 8px;
 }
 
-.info p i {
-  width: 30px;
-  text-align: center;
+.info .topcoat-button {
+  width: 60px;
 }
