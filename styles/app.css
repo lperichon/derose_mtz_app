@@ -63,11 +63,12 @@
   text-align: left;
   background: url('../images/tile-header-II.jpg');
   border-radius: 4px;
-  padding-left: 20px;
+  padding-left: 8px;
 }
 
 .info h2 {
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .info h3 {
@@ -75,6 +76,6 @@
 }
 
 .info p i {
-  width: 40px;
+  width: 30px;
   text-align: center;
 }
