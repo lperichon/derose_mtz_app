@@ -31,8 +31,23 @@
 	        document.location = "mailto:" + mail; 
 	    }
 	    
-	    $scope.fb = function(id){       
-	        document.location = "fb://profile/" + id; 
+	    $scope.fb = function(id){
+	    	if (device.platform == 'iOS') {
+				appAvailability.check('fb://', function(availability) {
+				    // availability is either true or false
+				    if(availability) { 
+				    	window.open('fb://profile/' + id, '_system', 'location=no');
+				    }
+				});
+	    	}
+	    	else if(devise.platform == 'Android') {
+	    		appAvailability.check('com.facebook.katana', function(availability) {
+				    // availability is either true or false
+				    if(availability) {
+				    	window.open('fb://profile/' + id, '_system', 'location=no');
+					}
+				});
+	    	}
 	    }
 	});
 })();
