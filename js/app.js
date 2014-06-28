@@ -42,7 +42,7 @@
 				    }
 				);
 	    	}
-	    	else if(devise.platform == 'Android') {
+	    	else if(device.platform == 'Android') {
 	    		appAvailability.check(
 				    'com.facebook.katana', // URI Scheme
 				    function() {           // Success callback
