@@ -33,20 +33,24 @@
 	    
 	    $scope.fb = function(id){
 	    	if (device.platform == 'iOS') {
-				appAvailability.check('fb://', function(availability) {
-				    // availability is either true or false
-				    if(availability) { 
-				    	window.open('fb://profile/' + id, '_system', 'location=no');
+	    		appAvailability.check(
+				    'fb://', // URI Scheme
+				    function() {  // Success callback
+				        window.open('fb://profile/' + id, '_system', 'location=no');
+				    },
+				    function() {  // Error callback  
 				    }
-				});
+				);
 	    	}
 	    	else if(devise.platform == 'Android') {
-	    		appAvailability.check('com.facebook.katana', function(availability) {
-				    // availability is either true or false
-				    if(availability) {
-				    	window.open('fb://profile/' + id, '_system', 'location=no');
-					}
-				});
+	    		appAvailability.check(
+				    'com.facebook.katana', // URI Scheme
+				    function() {           // Success callback
+				        window.open('fb://profile/' + id, '_system', 'location=no');
+				    },
+				    function() {           // Error callback
+				    }
+				);
 	    	}
 	    }
 	});
