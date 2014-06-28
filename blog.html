@@ -1,0 +1,12 @@
+<ons-page class="center blog" ng-controller="RecentPostsController">
+  <ons-scroller>
+    <span ng-bind="msg"></span>
+    <div ng-repeat="post in data.posts" class="recent-posts">
+      <h3><a>{{post.title}}</a></h3>
+      <div ng-bind="post.date | date:'medium'"></div>
+      <div ng-bind-html-unsafe="post.excerpt"></div>
+      <img src="{{post.thumbnail_images['medium']['url']}}" />
+      <a>View post</a>
+    </div>
+  </ons-scroller>
+</ons-page>
