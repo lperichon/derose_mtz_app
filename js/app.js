@@ -28,7 +28,7 @@
 	    }
 
 	    $scope.mail = function(mail){       
-	        document.location = "mailto:" + mail; 
+	        document.location.href  = "mailto:" + mail; 
 	    }
 	    
 	    $scope.fb = function(id){
