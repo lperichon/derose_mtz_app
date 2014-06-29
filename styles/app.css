@@ -78,3 +78,27 @@
 .info .topcoat-button {
   width: 60px;
 }
+
+.recent-posts.post {
+  position: relative;
+}
+
+.recent-posts.post .title {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  background-color: rgba(102, 102, 102, 0.5);
+  width: 100%;  
+}
+
+.title h3 {
+  color: ghostwhite;
+  text-align: left;
+  margin: 15px;
+}
+
+.recent-posts.post img {
+  width: 100%;
+  display: block;
+}
+
