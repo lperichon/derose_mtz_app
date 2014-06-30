@@ -1,8 +1,11 @@
 <div ng-controller="PostController">
+  <ons-scroller>
 	<span ng-bind="msg"></span>
-	<div ng-show="post">
+	<div ng-show="post" class="post">
+		<img src="{{post.thumbnail_images['medium']['url']}}" />
 		<h1 ng-bind="post.title"></h1>
 		<div ng-bind="post.date | date:'medium'"></div>
 		<div ng-bind-html="post.content"></div>
 	</div>
+  </ons-scroller>
 </div>

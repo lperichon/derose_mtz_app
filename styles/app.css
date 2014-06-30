@@ -97,8 +97,12 @@
   margin: 15px;
 }
 
-.recent-posts.post img {
+.post img {
   width: 100%;
   display: block;
+}
+
+.post h1 {
+  font-size: 1.3em;
 }
 
