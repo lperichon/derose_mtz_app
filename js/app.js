@@ -1,6 +1,7 @@
 (function(){
 	'use strict';
 	var app = angular.module('myApp', ['onsen.directives']);
+
 	app.controller("homeController", function($scope) {
 
 	    $scope.callSchool = function(){       
@@ -73,16 +74,20 @@
 			});
 		};
 
+		$scope.getPost = function(id) {
+			Blog.setPostId(id);
+			$scope.ons.navigator.pushPage('post.html');			
+		};
+
 		// call service
 		$scope.getRecent();
 	});
 
-	app.controller('PostController', function($scope, $location, Blog, $sce, $routeParams) {
+	app.controller('PostController', function($scope, $location, Blog, $sce) {
 		$scope.getPost = function() {
 
 			$scope.msg = "Loading...";
-
-			Blog.getPost($routeParams.id).then(function(data) {
+			Blog.getPost(Blog.getPostId()).then(function(data) {
 				$scope.post = data.post;
 
 				// make trusted html in 1.2
@@ -102,8 +107,17 @@
 	});
 
 	app.factory('Blog', function($http) {
+		var postId;
 	    var Blog = {
 	        endpoint: 'http://www.derosemartinez.com.ar/api',
+
+	        setPostId: function(id) {
+	        	postId = id;
+	        },
+
+	        getPostId: function() {
+	        	return postId;
+	        },
 
 	        getRecentPosts: function() {
 	            return this.makeCall(this.endpoint + '/get_recent_posts/?callback=JSON_CALLBACK');
