@@ -72,7 +72,7 @@ function registerPushwooshAndroid() {
     //projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID"
     pushNotification.registerDevice({ projectid: "330731156303", appid : "A983D-382D6" },
                                     function(token) {
-                                        //alert(token);
+                                        alert(token);
                                         //callback when pushwoosh is ready
                                         onPushwooshAndroidInitialized(token);
                                     },
